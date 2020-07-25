@@ -2,19 +2,18 @@ import kivy
 from kivy.app import App
 from kivy.uix.image import Image
 import pandas as pd
-import os
-import matplotlib.pyplot as plt
-from pandas.plotting import table 
 from kivy.core.window import Window
 
 
 def initState():
-    #os.chdir(r'data')
     df = pd.read_csv('./data/android_version.csv')
+    #Keep only latest data set
     df2 = df.iloc[[12]]
+    #Remove date for graphing
     df2 = df2.drop(['Date'], axis=1)
-    pie = df2.plot(kind="hist", figsize=(5,20), legend = True, use_index=True, subplots=True, colormap="Pastel1")
-    fig = pie[0].get_figure()
+    #Simple histogram
+    hist = df2.plot(kind="hist", figsize=(5,20), legend = True, use_index=True, subplots=True, colormap="Pastel1")
+    fig = hist[0].get_figure()
     fig.savefig('myhist.png')
 
 class MainApp(App):
