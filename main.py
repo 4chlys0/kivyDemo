@@ -12,7 +12,7 @@ def initState():
     #Remove date for graphing
     df2 = df2.drop(['Date'], axis=1)
     #Simple histogram
-    hist = df2.plot(kind="hist", figsize=(5,20), legend = True, use_index=True, subplots=True, colormap="Pastel1")
+    hist = df2.plot(kind="hist", legend = True, subplots=True, title="Android OS Version Fragmentation", colormap="Pastel1")
     fig = hist[0].get_figure()
     fig.savefig('myhist.png')
 
