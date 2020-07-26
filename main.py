@@ -20,7 +20,7 @@ class MainApp(App):
     Window.clearcolor = (1, 1, 1, 1)
     initState()
     def build(self):
-	image = Image(allow_stretch = True, source="myhist.png")
+        image = Image(allow_stretch = True, source="myhist.png")
         return image
 
 if __name__ == '__main__':
