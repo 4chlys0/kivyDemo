@@ -17,3 +17,10 @@ Testing:
 Warning: as avd manager warns, armabi-v7a emulation will be slow  
 
 it does not run as-is...
+
+Reverse Engineering:
+
+There's a few ways to reverse engineer an apk, jadx-gui is one of the simplest. I opened the apk in jadx and exported it in gradle folder format and as a jadx project in the reverse_engineering folder. 
+
+Here's some detail on the build process if curious 
+https://developer.android.com/studio/build
